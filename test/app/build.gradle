@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.viewbinding'
+    namespace 'com.example.test'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.viewbinding"
+        applicationId "com.example.test"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -30,17 +30,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-
-        // AndroidStudio 3.6 ~ 4.0
-        viewBinding{
-            enabled = true
-        }
-
-        // AndroidStudio 4.0 ~
-        buildFeatures{
-            viewBinding = true
-        }
 }
 
 dependencies {
