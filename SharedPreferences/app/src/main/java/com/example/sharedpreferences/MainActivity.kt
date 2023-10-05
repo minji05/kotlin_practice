@@ -19,16 +19,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun saveData() {
+
         val pref = getSharedPreferences("pref",0)
-        val edit = pref.edit() // 수정 모드
-        // 1번째 인자는 키, 2번째 인자는 실제 담아둘 값
-        edit.putString("name", binding.etHello.text.toString())
-        edit.apply() // 저장완료
+        val edit = pref.edit()
+        edit.putString("name",binding.etHello.text.toString())
+        edit.apply()
+
     }
 
     private fun loadData() {
+
         val pref = getSharedPreferences("pref",0)
-        // 1번째 인자는 키, 2번째 인자는 데이터가 존재하지 않을경우의 값
-        binding.etHello.setText(pref.getString("name",""))
+        binding.etHello.setText(pref.getString("",""))
+
     }
 }
